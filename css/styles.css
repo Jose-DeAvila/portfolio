@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header */ 
+.bg {
+    position: absolute;
+    
+}
+
+header{
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../img/bg-head.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header nav {
+    background-color: white;
+    align-items: center;
+    position: fixed;
+}
+
+.links {
+    position: absolute;
+    right: 0;
+}
+
+.links .list-menu {
+    display: flex;
+    list-style: none;
+    margin-top: 18px;
+}
+
+.links .list-menu li a{
+    color: black;
+    padding: 15px 15px;
+    transition: .4s ease all;
+    margin-right: 10px;
+}
+
+.links .list-menu li a:hover{
+    text-decoration: none;
+    color: orange;
+}
+
+header nav .uk-logo{
+    list-style: none;
+    margin-left: 20px;
+}
+
+nav .uk-logo{
+    transition: .3s ease all;
+    margin: 10px 0;
+}
+
+nav .uk-logo .text-brand {
+    background: linear-gradient(yellow, red);
+    font-family: 'Lobster', cursive;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav .uk-logo a:hover{
+    text-decoration: none;
+}
+
+nav .uk-logo:hover{
+    transform: translateY(5px);
+}
+.menu {
+    display: none;
+}
+
+/* INFORMACION */ 
+
+.infor {
+    margin-top: 20px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.infor .img{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.infor img{
+    height: 15.62em;
+    width: auto;
+    clip-path: circle(6.25em at center);
+}
+
+.infor .descripcion .nombreCompleto{
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    text-shadow: 2px 1px 5px orange;
+}
+
+.infor .descripcion .descrip {
+    width: 60%;
+    margin: auto;
+    text-align: justify;
+    color: white;
+    font-size: 24px;
+}
+
+.abajo {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 81px;
+    width: 100%;
+}
+
+.abajo a{
+    animation: movimiento 1s infinite;
+    color: white;
+    transition: .2s ease all;
+}
+
+.abajo a:hover{
+    color: orange;
+}
+
+/* Conocimientos */
+
+.conocimientos {
+    display: flex;
+}
+
+.conocimientos .img-conocimientos{
+    width: 50%;
+}
+
+.conocimientos .descrip-cono{
+    width: 50%;
+}
+
+.descrip-cono .titulo-sec{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.descrip-cono .elementos{
+}
+
+.cono-element{
+    background-color: rgba(253, 130, 47, 0.808);
+    font-size: 25px;
+    margin: 40px;
+    border: 1px solid black;
+    padding: 10px 25px;
+    border-radius: 30px;
+}
+
+/* KeyFrames */
+
+@keyframes movimiento {
+    0% {
+        transform: translateY(0);
+    }
+
+    25%{
+        transform: translateY(15px);
+    }
+
+    50% {
+        transform: translateY(30px);
+    }
+
+    75%{
+        transform: translateY(40px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 730px){
+    .links .list-menu{
+        overflow: hidden;
+        background-color: white;
+        display: block;
+        position: absolute;
+        right: 0px;
+        opacity: 0;
+        transform: scale(0);
+        transition: .4s ease all;
+        z-index: 99;
+    }
+    .links .list-menu li{ 
+        padding: 15px 0;
+    }
+    .menu{
+        display: inline-block;
+        position: absolute;
+        right: 0;
+    }
+    .links .list-menu.active{
+        opacity: 1;
+        transform: scale(1);
+        z-index: 99;
+    }
+    .infor .descripcion .descrip {
+        width: 100%;
+        font-size: 20px;
+        margin: 0 5px;
+    }
+    .conocimientos{
+        display: block;
+    }
+}
