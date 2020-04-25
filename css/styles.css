@@ -111,6 +111,7 @@ nav .uk-logo:hover{
     text-align: justify;
     color: white;
     font-size: 24px;
+    word-wrap: break-word;
 }
 
 .abajo {
@@ -145,22 +146,19 @@ nav .uk-logo:hover{
 }
 
 .descrip-cono .titulo-sec{
-    display: block;
-    width: 100%;
     text-align: center;
 }
 
 .descrip-cono .elementos{
+    word-wrap: break-word;
+}
+.descrip-cono .cono-element{
+    display: inline-block;
+    font-size: 30px;
+    margin: 20px 15px;
+    color: rgb(59, 59, 59);
 }
 
-.cono-element{
-    background-color: rgba(253, 130, 47, 0.808);
-    font-size: 25px;
-    margin: 40px;
-    border: 1px solid black;
-    padding: 10px 25px;
-    border-radius: 30px;
-}
 
 /* KeyFrames */
 
@@ -212,12 +210,26 @@ nav .uk-logo:hover{
         transform: scale(1);
         z-index: 99;
     }
+
+    .infor .descripcion {
+        width: 90%;
+        margin: auto;
+    }
     .infor .descripcion .descrip {
         width: 100%;
-        font-size: 20px;
-        margin: 0 5px;
+        font-size: 24px;
+        margin: 0;
     }
     .conocimientos{
         display: block;
+    }
+    .conocimientos .img-conocimientos{
+    width: 100%;
+    }
+    .conocimientos .descrip-cono{
+        width: 100%;    
+    }
+    .descrip-cono .cono-element{
+        font-size: 20px;
     }
 }
