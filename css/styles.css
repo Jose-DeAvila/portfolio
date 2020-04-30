@@ -23,10 +23,14 @@ header{
     background-size: cover;
 }
 
-header nav {
-    background-color: white;
+header #navbar {
+    background-color: transparent;
     align-items: center;
     position: fixed;
+    width: 100%;    
+    top: 0;
+    z-index: 99;
+    transition: .6s ease all;
 }
 
 .links {
@@ -153,19 +157,12 @@ nav .uk-logo:hover{
 
 .descrip-cono .elementos{
     word-wrap: break-word;
-<<<<<<< HEAD
-=======
     position: relative;
-    top: 20%;
->>>>>>> master
+    top: 10%;
 }
 .descrip-cono .cono-element{
     display: inline-block;
-    font-size: 30px;
-<<<<<<< HEAD
-    margin: 20px 15px;
-    color: rgb(59, 59, 59);
-=======
+    font-size: 2vw;
     color: rgb(59, 59, 59);
     padding: 15px;
     margin-bottom: 25px;
@@ -176,28 +173,23 @@ nav .uk-logo:hover{
 /* Relacionados */
 
 .relacionados{
-    width: 100%;
-    height: auto;
-    display: inline-block;
-    display: flex;
-    justify-content: center;
+    width: 70%;
+    margin: auto;
+    display: inline-flex;
+    text-align: center;
 }
 
 .relacionados .relacionado {
-    width: 20%;
-    height: 250px;
-    margin-right: 30px;
-    display: inline-block;
+    margin-right: 20px;
 }
 
 .relacionados .relacionado img{
     width: 100%;
-    height: 350px;
+    height: 21.875em;
 }
 
-.relacionados .titulo-sec {
-    width: 100%;
-    text-align: center !important;
+.titulo-sec {
+    text-align: center;
 }
 
 .relacionados .nombre, .relacionados .social{
@@ -208,7 +200,7 @@ nav .uk-logo:hover{
 
 .uk-icon{
     margin: 0 5px;
->>>>>>> master
+    transition: .2s ease all;
 }
 
 
@@ -293,10 +285,11 @@ nav .uk-logo:hover{
     }
     .descrip-cono .cono-element{
         font-size: 20px;
-<<<<<<< HEAD
-=======
         margin-top: 30px;
         margin-bottom: 0;
->>>>>>> master
     }
+}
+
+@media screen and (max-width: 769px){
+    
 }
