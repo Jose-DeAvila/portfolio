@@ -172,37 +172,49 @@ nav .uk-logo:hover{
 
 /* Relacionados */
 
+/* ---------NEW CODE-------- */
 .relacionados{
-    width: 70%;
+    width: 90%;
+    margin: 100px;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: "rel1 rel2 rel3 rel4";
+}
+
+.titulo-sec{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.relacionados .text-relacionado {
+    text-align: center;
+}
+
+.relacionados .relacionado1{
     margin: auto;
-    display: inline-flex;
-    text-align: center;
+    max-width: 300px;
+    grid-area: rel1;
 }
 
-.relacionados .relacionado {
-    margin-right: 20px;
+.relacionados .relacionado2{
+    margin: auto;
+    max-width: 300px;
+    grid-area: rel2;
 }
 
-.relacionados .relacionado img{
-    width: 100%;
-    height: 21.875em;
+.relacionados .relacionado3{
+    margin: auto;
+    max-width: 300px;
+    grid-area: rel3;
 }
 
-.titulo-sec {
-    text-align: center;
+.relacionados .relacionado4{
+    margin: auto;
+    max-width: 300px;
+    grid-area: rel4;
 }
-
-.relacionados .nombre, .relacionados .social{
-    text-align: center;
-    margin: 0;
-    color: black;
-}
-
-.uk-icon{
-    margin: 0 5px;
-    transition: .2s ease all;
-}
-
 
 /* KeyFrames */
 
@@ -291,5 +303,14 @@ nav .uk-logo:hover{
 }
 
 @media screen and (max-width: 769px){
-    
+    .relacionados{
+        margin: auto;
+        width: auto;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: "rel1 rel1 rel1 rel1"
+                             "rel2 rel2 rel2 rel2"
+                             "rel3 rel3 rel3 rel3"
+                             "rel4 rel4 rel4 rel4";
+    }
 }
