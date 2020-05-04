@@ -45,7 +45,7 @@ header #navbar {
 }
 
 .links .list-menu li a{
-    color: black;
+    color: darkgray;
     padding: 15px 15px;
     transition: .4s ease all;
     margin-right: 10px;
@@ -288,8 +288,4 @@ nav .uk-logo:hover{
         margin-top: 30px;
         margin-bottom: 0;
     }
-}
-
-@media screen and (max-width: 769px){
-    
 }
