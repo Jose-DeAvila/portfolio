@@ -8,6 +8,40 @@ html {
     scroll-behavior: smooth;
 }
 
+.wsp {
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wsp .wsp-icon {
+    background-color: green;
+    color: white;
+    transform: scale(1.2);
+    transition: .3s ease all;
+    z-index: 99;
+}
+
+.wsp .wsp-icon:hover{
+    background-color: rgb(2, 196, 2);
+}
+
+.wsp .wsp-icon:hover ~ .texto-wsp{
+    transform: translateX(0);
+}
+
+.wsp .texto-wsp{
+    color: white;
+    font-weight: bold;
+    margin-left: 5px;
+    transform: translateX(-200px);
+    transition: .2s ease all;
+    z-index: 1;
+}
+
 /* Header */ 
 .bg {
     position: absolute;
@@ -44,13 +78,26 @@ header #navbar {
     margin-top: 18px;
 }
 
-.link{
+.no-scroll{
     padding: 15px 15px;
+    color: white;
     transition: .4s ease all;
     margin-right: 10px;
 }
 
-.link:hover{
+.no-scroll:hover{
+    text-decoration: none;
+    color: orange;
+}
+
+.scroll{
+    padding: 15px 15px;
+    color: black;
+    transition: .4s ease all;
+    margin-right: 10px;
+}
+
+.scroll:hover{
     text-decoration: none;
     color: orange;
 }
@@ -333,6 +380,9 @@ form>div{
     }
     .links .list-menu li{ 
         padding: 15px 0;
+    }
+    .m30{
+        color: black;
     }
     .menu{
         display: inline-block;
