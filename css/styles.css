@@ -44,14 +44,13 @@ header #navbar {
     margin-top: 18px;
 }
 
-.links .list-menu li a{
-    color: darkgray;
+.link{
     padding: 15px 15px;
     transition: .4s ease all;
     margin-right: 10px;
 }
 
-.links .list-menu li a:hover{
+.link:hover{
     text-decoration: none;
     color: orange;
 }
@@ -162,12 +161,20 @@ nav .uk-logo:hover{
 }
 .descrip-cono .cono-element{
     display: inline-block;
+    cursor: pointer;
     font-size: 2vw;
-    color: rgb(59, 59, 59);
+    color: rgb(2, 2, 114);
+    border: 2px solid rgb(2, 2, 114);
     padding: 15px;
     margin-bottom: 25px;
     border-radius: 25px;
-    animation: animation 3s infinite alternate-reverse;
+    transition: .4s ease all;
+}
+
+.descrip-cono .cono-element:hover{
+    color: white;
+    background-color: rgb(2, 2, 114);
+    border: 2px solid rgb(2, 2, 114);
 }
 
 /* Relacionados */
@@ -175,7 +182,7 @@ nav .uk-logo:hover{
 /* ---------NEW CODE-------- */
 .relacionados{
     width: 90%;
-    margin: 100px;
+    margin: 50px 100px;
     display: grid;
     grid-gap: 50px;
     grid-template-columns: repeat(4, 1fr);
@@ -190,6 +197,11 @@ nav .uk-logo:hover{
 
 .relacionados .text-relacionado {
     text-align: center;
+}
+
+.relacionados .nombre {
+    margin-bottom: 5px;
+    color: black;
 }
 
 .relacionados .relacionado1{
@@ -216,6 +228,72 @@ nav .uk-logo:hover{
     grid-area: rel4;
 }
 
+.relacionados .social {
+    margin-top: 0px;
+}
+
+.relacionados .uk-icon{
+    color: black;
+    padding: 0 5px;
+    cursor: pointer;
+    transition: .2s ease all;
+    transform: scale(1.2);
+}
+
+.relacionados .uk-icon:hover{
+    color: orange;
+}
+
+/* Contácto */
+
+.contacto{
+    width: 80%;
+    margin: 10px auto;
+    color: black;
+}
+
+label{
+    display: block;
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+.uk-input{
+    width: 100%;   
+    border-radius: 25px; 
+}
+
+.uk-input:focus{
+    border-color: orange;
+}
+
+.input-msg{
+    height: 150px;
+}
+
+form>div{
+    margin-top: 20px;
+}
+.btn {
+    width: 100%;
+    display: flex;
+}
+.btn-enviar{
+    margin: auto;
+    background-color: transparent;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 2px solid orange;
+    color: orange;
+    cursor: pointer;
+    transition: .4s ease all;
+}
+
+.btn-enviar:hover{
+    background-color: orange;
+    color: white;
+}
+
 /* KeyFrames */
 
 @keyframes movimiento {
@@ -239,16 +317,6 @@ nav .uk-logo:hover{
     }
 }
 
-@keyframes animation {
-    from{
-        background-color: white;
-        color: black;
-    }
-    to{
-        background-color: black;
-        color: white;
-    }
-}
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 730px){
@@ -300,8 +368,6 @@ nav .uk-logo:hover{
         margin-top: 30px;
         margin-bottom: 0;
     }
-<<<<<<< HEAD
-=======
 }
 
 @media screen and (max-width: 769px){
@@ -315,5 +381,4 @@ nav .uk-logo:hover{
                              "rel3 rel3 rel3 rel3"
                              "rel4 rel4 rel4 rel4";
     }
->>>>>>> 6fb9f248d642c1a13f4f66a20440a7cbff856c13
 }

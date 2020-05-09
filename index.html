@@ -59,7 +59,7 @@
     </header>
     <hr class="uk-divider-icon" id="conocimientos">
     <main>
-        <div class="conocimientos">
+        <section class="conocimientos">
             <div class="img-conocimientos">
                 <img src="img/conocimientos.svg" alt="Imágen Conocimientos">
             </div>
@@ -79,10 +79,10 @@
                     <span class="cono-element" uk-tooltip="Lenguaje de programación utilizado principalmente para inteligencia artificial y Machine Learning.">Python</span>
                     <span class="cono-element" uk-tooltip="Lenguaje de programación en interfaces y basado en objetos. Utilizado principalmente en la creación de aplicaciones móviles.">Java</span></p>
             </div>
-        </div>
+        </section>
         <hr class="uk-divider-icon" id="relacionados">
         <h1 class="titulo-sec">Relacionados</h1>
-        <div class="relacionados">
+        <section class="relacionados">
             <section class="relacionado1">
                 <div class="img-relacionado">
                     <img src="img/relacionado.jpg" alt="">
@@ -119,11 +119,33 @@
                     <p class="social"><a href="#" uk-icon="icon: world"></a><a href="#" uk-icon="icon: facebook"></a><a href="#" uk-icon="icon: twitter"></a><a href="#" uk-icon="icon: instagram"></a><a href="#" uk-icon="icon: linkedin"></a></p>
                 </div>
             </section>
-        </div>
+        </section>
+        <hr class="uk-divider-icon" id="contacto">
+        <h1 class="titulo-sec">Contácto</h1>
+        <section class="contacto">
+            <form action="enviar-form.php" method="POST">
+                <div class="nombre">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" class="uk-input uk-form-width-large" name="nombre" id="nombre" required />
+                </div>
+                <div class="email">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" class="uk-input uk-form-width-large" name="email" id="email" required />
+                </div>
+                <div class="asunto">
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" class="uk-input uk-form-width-large" name="asunto" id="asunto" required />
+                </div>
+                <div class="mensaje">
+                    <label for="msg">Mensaje</label>
+                    <textarea name="msg" class="uk-input input-msg" id="msg" cols="30" rows="10" required></textarea>
+                </div>
+                <div class="btn">
+                    <input type="submit" value="Enviar!" class="btn-enviar">
+                </div>
+            </form>
+        </section>
     </main>
-    <div class="nube">
-        
-    </div>
 <script src="js/main.js"></script>
 <script src="js/uikit.min.js"></script>
 <script src="js/uikit-icons.min.js"></script>
