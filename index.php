@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,6 +9,16 @@
     <title>Jose De Avila ~ Inicio</title>
 </head>
 <body onscroll="scroll()">
+    <script type="text/javascript">
+        let enviado = <?= $_GET['id'] ?>;
+        if (enviado==1){
+            alert("Correo electrónico enviado correctamente!");
+        }
+    </script>
+    <div class="wsp">
+        <a  href="https://api.whatsapp.com/send?phone=573015243359&text=Me%20gustaría%20contratar%20sus%20servicios" uk-icon="whatsapp" class="wsp-icon uk-icon-button" target="_blank"></a>
+        <span class="texto-wsp">Contáctanos</span>
+    </div>
     <header>
         <div class="header-init">
             <div class="nav">
@@ -24,16 +33,16 @@
                     <div class="links">
                         <ul class="list-menu" id="menu">
                             <li>
-                                <a class="link" href="#">INICIO</a>
+                                <a class="prueba no-scroll" href="index.html">INICIO</a>
                             </li>
                             <li>
-                                <a class="link" href="#conocimientos">CONOCIMIENTOS</a>
+                                <a class="prueba no-scroll" href="#conocimientos">CONOCIMIENTOS</a>
                             </li>
                             <li>
-                                <a class="link" href="#relacionados">RELACIONADOS</a>
+                                <a class="prueba no-scroll" href="#relacionados">RELACIONADOS</a>
                             </li>
                             <li>
-                                <a class="link" href="#contacto">CONTACTO</a>
+                                <a class="prueba no-scroll" href="#contacto">CONTACTO</a>
                             </li>
                         </ul>
                     </div>
@@ -49,9 +58,9 @@
             <div class="descripcion">
                 <p class="nombreCompleto">Jose Luis De Avila Mercado</p>
                 <p class="descrip">
-                    Estudiante te ingeniería informática, con más de 5 años de experiencia
+                    Estudiante de ingeniería informática, con más de 5 años de experiencia
                     en el desarrollo web. Conocimiento en varias ramas de las TICS. Me gusta
-                    investigar, y siempre intentar buscar una solución eficaz a los problemas.
+                    investigar, y siempre intentar buscar una solución rápida y eficaz a los problemas.
                 </p>
             </div>
         </div>
@@ -121,7 +130,7 @@
             </section>
         </section>
         <hr class="uk-divider-icon" id="contacto">
-        <h1 class="titulo-sec">Contácto</h1>
+        <h1 class="titulo-sec">Contacto</h1>
         <section class="contacto">
             <form action="enviar-form.php" method="POST">
                 <div class="nombre">
@@ -141,7 +150,7 @@
                     <textarea name="msg" class="uk-input input-msg" id="msg" cols="30" rows="10" required></textarea>
                 </div>
                 <div class="btn">
-                    <input type="submit" value="Enviar!" class="btn-enviar">
+                    <input type="submit" value="¡Enviar!" class="btn-enviar">
                 </div>
             </form>
         </section>
