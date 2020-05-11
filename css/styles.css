@@ -7,6 +7,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.uk-divider-icon{
+    margin-bottom: 50px;
+}
+
 .wsp {
     display: flex;
     position: fixed;
@@ -146,6 +150,7 @@ nav .uk-logo:hover{
     height: 15.62em;
     width: auto;
     clip-path: circle(6.25em at center);
+    border-radius: 50px;
 }
 
 .infor .descripcion .nombreCompleto{
@@ -210,8 +215,8 @@ nav .uk-logo:hover{
     display: inline-block;
     cursor: pointer;
     font-size: 2vw;
-    color: rgb(2, 2, 114);
-    border: 2px solid rgb(2, 2, 114);
+    color: rgb(255, 157, 0);
+    border: 2px solid rgb(255, 157, 0);
     padding: 15px;
     margin-bottom: 25px;
     border-radius: 25px;
@@ -220,8 +225,8 @@ nav .uk-logo:hover{
 
 .descrip-cono .cono-element:hover{
     color: white;
-    background-color: rgb(2, 2, 114);
-    border: 2px solid rgb(2, 2, 114);
+    background-color: rgb(255, 157, 0);
+    border: 2px solid rgb(255, 157, 0);
 }
 
 /* Relacionados */
@@ -324,6 +329,7 @@ form>div{
 .btn {
     width: 100%;
     display: flex;
+    margin-bottom: 50px;
 }
 .btn-enviar{
     margin: auto;
@@ -339,6 +345,99 @@ form>div{
 .btn-enviar:hover{
     background-color: orange;
     color: white;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    height: auto;
+    background-color: #000;
+    padding: 25px;
+}
+
+footer .info-emp {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .info-emp a{
+    transition: .3s ease all;
+    padding: 0 10px;
+}
+
+footer .info-emp .logo{
+    background: linear-gradient(yellow, red);
+    font-family: 'Lobster', cursive;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+}
+
+.info-emp .logo img{
+    transform: scale(0.8);
+}
+
+.info-emp .links-footer{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    font-size: 1.2em;
+    -webkit-box-pack: justify;
+     -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.info-emp .links-footer:before,
+.info-emp .links-footer:after {
+  content: '';
+  display: block;
+  width: 2px;
+}
+
+.info-emp .links-footer a{
+    color: orange;
+    padding: 10px;
+}
+
+.info-emp .links-footer a:hover{
+    transform: translateY(-20px);    
+}
+
+.social-footer{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-footer h2{
+    margin: 30px 0;
+    color: orange;
+    font-family: 'Lobster', cursive ;
+}
+
+.social-footer ul {
+    display:flex;
+    list-style: none;
+    padding: 0;
+}
+
+.social-footer ul li a{
+    padding:10px;
+    margin: 0 10px;
+    color: orange;
+    transition: .2s ease all;
+}
+
+.social-footer ul li a:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 5px white;
 }
 
 /* KeyFrames */
@@ -420,6 +519,19 @@ form>div{
     }
     .no-scroll{
         color: black;
+    }
+    footer{
+        flex-direction: column;
+    }
+    .social-footer{
+        width: 100%;
+    }
+    footer .info-emp{
+        width: 100%;
+    }
+    footer .info-emp .links-footer{
+        flex-wrap: wrap;
+        flex-direction: column;
     }
 }
 

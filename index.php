@@ -10,7 +10,7 @@
 </head>
 <body onscroll="scroll()">
     <script type="text/javascript">
-        let enviado = <?= $_GET['id'] ?>;
+        let enviado = <?php $_GET['id'] ?>;
         if (enviado==1){
             alert("Correo electrónico enviado correctamente!");
         }
@@ -19,7 +19,7 @@
         <a  href="https://api.whatsapp.com/send?phone=573015243359&text=Me%20gustaría%20contratar%20sus%20servicios" uk-icon="whatsapp" class="wsp-icon uk-icon-button" target="_blank"></a>
         <span class="texto-wsp">Contáctanos</span>
     </div>
-    <header>
+    <header id="inicio">
         <div class="header-init">
             <div class="nav">
                 <nav uk-navbar id="navbar">
@@ -33,16 +33,16 @@
                     <div class="links">
                         <ul class="list-menu" id="menu">
                             <li>
-                                <a class="prueba no-scroll" href="index.html">INICIO</a>
+                                <a class="prueba no-scroll" href="#inicio" onclick="mostrar()">INICIO</a>
                             </li>
                             <li>
-                                <a class="prueba no-scroll" href="#conocimientos">CONOCIMIENTOS</a>
+                                <a class="prueba no-scroll" href="#conocimientos" onclick="mostrar()">CONOCIMIENTOS</a>
                             </li>
                             <li>
-                                <a class="prueba no-scroll" href="#relacionados">RELACIONADOS</a>
+                                <a class="prueba no-scroll" href="#relacionados" onclick="mostrar()">RELACIONADOS</a>
                             </li>
                             <li>
-                                <a class="prueba no-scroll" href="#contacto">CONTACTO</a>
+                                <a class="prueba no-scroll" href="#contacto" onclick="mostrar()">CONTACTO</a>
                             </li>
                         </ul>
                     </div>
@@ -155,6 +155,26 @@
             </form>
         </section>
     </main>
+    <footer>
+        <div class="info-emp">
+            <a href="#" class="logo"><img src="img/j-logo.png" width="100px" height="100px" alt="">Jose De Avila</a>
+            <ul class="links-footer">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#conocimientos">Conocimientos</a></li>
+                <li><a href="#relacionados">Relacionados</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="social-footer">
+            <h2>Redes sociales</h2>
+            <ul>
+                <li><a href="#" uk-icon="facebook"></a></li>
+                <li><a href="#" uk-icon="linkedin"></a></li>
+                <li><a href="#" uk-icon="twitter"></a></li>
+                <li><a href="#" uk-icon="google"></a></li>
+            </ul>
+        </div>
+    </footer>
 <script src="js/main.js"></script>
 <script src="js/uikit.min.js"></script>
 <script src="js/uikit-icons.min.js"></script>
