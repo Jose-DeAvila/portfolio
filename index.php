@@ -9,11 +9,14 @@
     <title>Jose De Avila ~ Inicio</title>
 </head>
 <body onscroll="scroll()">
-    <script type="text/javascript">
-        let enviado = <?php $_GET['id'] ?>;
-        if (enviado==1){
-            alert("Correo electrónico enviado correctamente!");
+    <script>
+    window.addEventListener('load', function(){
+        let success = <?= $_GET['id']?>;
+        if(success==1){
+            let success_msg = document.getElementById('msg-success');
+            success_msg.style.display="block";
         }
+    });
     </script>
     <div class="wsp">
         <a  href="https://api.whatsapp.com/send?phone=573015243359&text=Me%20gustaría%20contratar%20sus%20servicios" uk-icon="whatsapp" class="wsp-icon uk-icon-button" target="_blank"></a>
@@ -59,7 +62,7 @@
                 <p class="nombreCompleto">Jose Luis De Avila Mercado</p>
                 <p class="descrip">
                     Estudiante de ingeniería informática, con más de 5 años de experiencia
-                    en el desarrollo web. Conocimiento en varias ramas de las TICS. Me gusta
+                    en el desarrollo web. Conocimiento en varias ramas de las TIC. Me gusta
                     investigar, y siempre intentar buscar una solución rápida y eficaz a los problemas.
                 </p>
             </div>
@@ -130,6 +133,10 @@
             </section>
         </section>
         <hr class="uk-divider-icon" id="contacto">
+        <div class="uk-alert-success" uk-alert style="display: none;" id="msg-success">
+            <a class="uk-alert-close" uk-close></a>
+            <p>Su mensaje ha sido enviado correctamente. Responderemos lo más pronto posible. ¡Gracias por elegirnos!</p>
+        </div>
         <h1 class="titulo-sec">Contacto</h1>
         <section class="contacto">
             <form action="enviar-form.php" method="POST">
@@ -168,10 +175,9 @@
         <div class="social-footer">
             <h2>Redes sociales</h2>
             <ul>
-                <li><a href="#" uk-icon="facebook"></a></li>
-                <li><a href="#" uk-icon="linkedin"></a></li>
-                <li><a href="#" uk-icon="twitter"></a></li>
-                <li><a href="#" uk-icon="google"></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/lmillons.wilder7" uk-icon="facebook"></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/jose-luis-de-avila-mercado-2547471a4/" uk-icon="linkedin"></a></li>
+                <li><a target="_blank" href="https://twitter.com/JoseLuisDeAvi13" uk-icon="twitter"></a></li>
             </ul>
         </div>
     </footer>

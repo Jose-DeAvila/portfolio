@@ -6,5 +6,7 @@
     $mensaje = $_POST['msg'];
     $contenido = "Nombre: ". $nombreCompleto . "\nCorreo: ". $email . "\nAsunto: ". $asunto . "\nMensaje: ". $mensaje;
     mail($destino,$asunto,$contenido);
-    header("Location: index.php?id=1");
+    if(mail){
+        header("Location: index.php?id=1#contacto");
+    }
 ?>
