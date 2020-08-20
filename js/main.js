@@ -62,6 +62,7 @@ function showWindowSuccess(){
     setTimeout(() => {
         check.style.display = 'block';
     }, 10);
+    document.getElementById('form').reset();
 }
 
 function HiddeWindowSuccess(){
