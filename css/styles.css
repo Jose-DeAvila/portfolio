@@ -11,13 +11,10 @@ html {
     margin-bottom: 50px;
 }
 
-<<<<<<< HEAD
 .titulo-sec{
     text-align: center;
 }
 
-=======
->>>>>>> c6b4c49823a127c44acbc8b657daeb23046d481c
 .wsp {
     display: flex;
     position: fixed;
@@ -25,11 +22,7 @@ html {
     left: 10px;
     justify-content: space-between;
     align-items: center;
-<<<<<<< HEAD
     z-index: 200;
-=======
-    z-index: 999;
->>>>>>> c6b4c49823a127c44acbc8b657daeb23046d481c
 }
 
 .wsp .wsp-icon {
@@ -278,7 +271,6 @@ nav .uk-logo:hover{
 }
 
 .infor .img{
-<<<<<<< HEAD
     width: 140px;
     height: 160px;
     margin: auto;
@@ -287,17 +279,6 @@ nav .uk-logo:hover{
     background-size: cover;
     border-radius: 50%;
     margin-bottom: 10px;
-=======
-    text-align: center;
-    margin-bottom: 0;
-}
-
-.infor img{
-    height: 15.62em;
-    width: auto;
-    clip-path: circle(6.25em at center);
-    border-radius: 50px;
->>>>>>> c6b4c49823a127c44acbc8b657daeb23046d481c
 }
 
 .infor .descripcion .nombreCompleto{
