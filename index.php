@@ -154,7 +154,7 @@
                         <p class="descrip-pag">Sistema de noticias.</p>
                     </div>
                 </a>
-                <a class="karthus project" href="http://notiaunar02.tonohost.com/" target="_blank" uk-icon="chevron-double-right">
+                <a class="karthus project" href="jose-deavila.github.io/karthuswebpage" target="_blank" uk-icon="chevron-double-right">
                     <img src="img/link.svg" alt="">
                     <div class="text-project">
                         <p class="title-pag">Karthus Company</p>
@@ -174,7 +174,7 @@
         <h1 class="titulo-sec">Contacto</h1>
 >>>>>>> c6b4c49823a127c44acbc8b657daeb23046d481c:index.php
         <section class="contacto">
-            <form action="https://formspree.io/mgenbedp" method="POST" target="_blank" onsubmit="showWindowSuccess()">
+            <form action="https://formspree.io/mgenbedp" method="POST" target="_blank" onsubmit="showWindowSuccess()" id="form">
                 <div class="nombre">
                     <label for="nombre">Nombre Completo:</label>
                     <input type="text" class="uk-input uk-form-width-large" name="nombre" id="nombre" required />
