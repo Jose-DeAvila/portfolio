@@ -34,7 +34,6 @@ function changeIcon(){
 
 const showWindowSuccess = async (e) => {
     e.preventDefault();
-    e.target.reset();
     const btnEnviar = document.querySelector('.btnEnviar');
     btnEnviar.setAttribute('disabled', true);
     btnEnviar.innerText = "Enviando...";
@@ -45,7 +44,6 @@ const showWindowSuccess = async (e) => {
         email: '',
         message: ''
     }
-    
     inputs.forEach(input => {  
         if(input.name === "nombre"){
             data.completeName = input.value;
@@ -57,17 +55,24 @@ const showWindowSuccess = async (e) => {
             data.message = input.value;
         }
     });
+    
+    
+    e.target.reset();
 
     (function(){
         emailjs.init("user_IEVJfpe97VCSXhQ83AP0M");
     })();
 
-    const formResult = await emailjs.send("service_iyqsl2e", "template_mvpuxnr", data);
-    if(formResult.status === 200){
-        btnEnviar.innerText = "Enviar";
-        btnEnviar.setAttribute('disabled', false);
-        formStatus.innerText = "Mensaje enviado correctamente, nos pondremos en contacto con usted lo más pronto posible!";
-    }
+    emailjs.send("service_iyqsl2e", "template_mvpuxnr", data)
+    .then(response => {
+        if(response.status === 200){
+            btnEnviar.innerText = "Enviar";
+            btnEnviar.setAttribute('diabled', false);
+            formStatus.innerText = "Mensaje enviado correctamente, nos pondremos en contacto con usted lo más pronto posible!";
+        }
+    }, err => {
+        console.log(err);
+    });
 }
 
 function HiddeWindowSuccess(){

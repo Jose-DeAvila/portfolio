@@ -258,7 +258,6 @@ nav .uk-logo:hover{
 .project .text-project {
     font-size: 20px;
     color: white;
-    position: absolute;
     opacity: 0;
     transform: translateY(50px);
     transition: .5s ease all;
