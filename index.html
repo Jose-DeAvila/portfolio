@@ -9,30 +9,10 @@
     <link rel="shortcut icon" href="img/j-logo.png" type="image/x-icon">
     <title>Jose De Avila ~ Inicio</title>
 </head>
-<body onscroll="scroll()" onload="showMessage()" id="body">
+<body onscroll="scroll()" onload="scroll()" id="body">
     <div class="wsp">
         <a  href="https://api.whatsapp.com/send?phone=573015243359&text=Me%20gustaría%20contratar%20sus%20servicios" uk-icon="whatsapp" class="wsp-icon uk-icon-button" target="_blank"></a>
         <span class="texto-wsp">Contáctanos</span>
-    </div>
-    <div class="alert-msg" id="alert-msg">
-        <div class="elements">
-            <div class="close" onclick="HiddeWindowSuccess()">
-                X
-            </div>
-            <div class="check">
-                <div class="success-checkmark">
-                  <div class="check-icon">
-                    <span class="icon-line line-tip"></span>
-                    <span class="icon-line line-long"></span>
-                    <div class="icon-circle"></div>
-                    <div class="icon-fix"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="text">
-                <p>Su mensaje se esta enviando. Si es exitoso, se redireccionará a una página de confirmación.</p>
-            </div>
-        </div>
     </div>
     <header id="inicio">
         <div class="header-init">
@@ -68,9 +48,10 @@
             <div class="descripcion">
                 <p class="nombreCompleto">Jose Luis De Avila Mercado</p>
                 <p class="descrip">
-                    Estudiante de ingeniería informática, con más de 5 años de experiencia
+                    Estudiante de ingeniería informática, con más de 4 años de experiencia
                     en el desarrollo web. Conocimiento en varias ramas de las TIC. Me gusta
-                    investigar, y siempre intentar buscar una solución rápida y eficaz a los problemas.
+                    investigar, y siempre intentar buscar una solución rápida y eficaz a los problemas. 
+                    Autodidacta y siempre enfocado en aprender cosas nuevas cada día.
                 </p>
             </div>
         </div>
@@ -90,7 +71,7 @@
                     <span class="cono-element" uk-tooltip="Generar código del lado del servidor.">PHP</span>
                     <span class="cono-element" uk-tooltip="Gestor de bases de datos.">MySQL</span>
                     <span class="cono-element" uk-tooltip="Framework CSS para el diseño web responsive.">Bootstrap</span>
-                    <span class="cono-element" uk-tooltip="Framework para acciones y eventos de la página.">UiKit</span>
+                    <span class="cono-element" uk-tooltip="Lenguaje de programación de basado en JavaScript server side">NodeJS</span>
                     <span class="cono-element" uk-tooltip="Framework CSS para el diseño web responsive.">Foundation</span>
                     <span class="cono-element" uk-tooltip="Biblioteca de JavaScript para el desarrollo de interfaces.">React</span>
                     <span class="cono-element" uk-tooltip="Lenguaje de programación utilizado principalmente para el desarrollo de videojuegos.">C#</span>
@@ -103,6 +84,13 @@
         <h1 class="titulo-sec">PORTFOLIO</h1>
         <section class="portfolio">
             <ul class="projects">
+                <a class="github project" href="https://github.com/jose-deavila" target="_blank" uk-icon="chevron-double-right">
+                    <img src="img/link.svg" alt="">
+                    <div class="text-project">
+                        <p class="title-pag">Perfil de github</p>
+                        <p class="descrip-pag">Encontrarás más proyectos míos</p>
+                    </div>
+                </a>
                 <a class="project notiaunar" href="http://notiaunar02.tonohost.com/" target="_blank" uk-icon="chevron-double-right">
                    <img src="img/link.svg" alt="">
                     <div class="text-project">
@@ -117,34 +105,33 @@
                         <p class="descrip-pag">Página informativa Karthus.</p>
                     </div>
                 </a>
+                <a class="pixelitos project" href="https://pixelitos.es/index" target="_blank" uk-icon="chevron-double-right">
+                    <img src="img/link.svg" alt="">
+                    <div class="text-project">
+                        <p class="title-pag">Pixelitos Hotel</p>
+                        <p class="descrip-pag">Videojuego basado en Habbo.</p>
+                    </div>
+                </a>
             </ul>
         </section>
         <hr class="uk-divider-icon" id="contacto">
-        <div class="uk-alert-success" uk-alert style="display: none;" id="msg-success">
-            <a class="uk-alert-close" uk-close></a>
-            <p>Su mensaje ha sido enviado correctamente. Responderemos lo más pronto posible. ¡Gracias por elegirnos!</p>
-        </div>
         <h1 class="titulo-sec" id="contact1">Contacto</h1>
         <section class="contacto">
-            <form action="https://formspree.io/mgenbedp" method="POST" target="_blank" onsubmit="showWindowSuccess()" id="form">
+            <form target="_blank" onsubmit="showWindowSuccess(event)">
                 <div class="nombre">
                     <label for="nombre">Nombre Completo:</label>
-                    <input type="text" class="uk-input uk-form-width-large" name="nombre" id="nombre" required />
+                    <input type="text" class="uk-input uk-form-width-large" name="nombre" id="nombre input" required />
                 </div>
                 <div class="email">
                     <label for="email">Correo electrónico:</label>
-                    <input type="email" class="uk-input uk-form-width-large" name="_replyto" id="email" required />
-                </div>
-                <div class="asunto">
-                    <label for="asunto">Asunto:</label>
-                    <input type="text" class="uk-input uk-form-width-large" name="asunto" id="asunto" required />
+                    <input type="email" class="uk-input uk-form-width-large" name="email" id="email input" required />
                 </div>
                 <div class="mensaje">
                     <label for="msg">Mensaje</label>
-                    <textarea name="message" class="uk-input input-msg" id="msg" cols="30" rows="10" required></textarea>
+                    <textarea name="message" class="uk-input input-msg" id="msg input" cols="30" rows="10" required></textarea>
                 </div>
                 <div class="btn">
-                    <button class="btn-enviar pageclip-form__submit--dark-loader" type="submit">
+                    <button class="btnEnviar" type="submit">
                         <span>Enviar!</span>
                     </button>
                 </div>
@@ -171,6 +158,7 @@
             </ul>
         </div>
     </footer>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 <script src="js/main.js"></script>
 <script src="js/uikit.min.js"></script>

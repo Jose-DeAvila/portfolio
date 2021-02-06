@@ -32,37 +32,42 @@ function changeIcon(){
     }
 }
 
-function getURL(name,url){
-    if(!url){
-        url = window.location.href;
+const showWindowSuccess = async (e) => {
+    e.preventDefault();
+    e.target.reset();
+    const btnEnviar = document.querySelector('.btnEnviar');
+    btnEnviar.setAttribute('disabled', true);
+    btnEnviar.innerText = "Enviando...";
+    const formStatus = document.getElementById('my-form-status');
+    const inputs = document.querySelectorAll('.uk-input');
+    let data = {
+        completeName: '',
+        email: '',
+        message: ''
     }
-    name = name.replace(/[\[\]]/g, '\\$&');
-    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-        results = regex.exec(url);
-    if(!results) return null;
-    if(!results[2]) return 'na';    
-    return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}
-function showMessage(){
-    let success = document.referrer.indexOf(window.location.host)
-    console.log(success);
-    if(success==-1){
-        console.log("echo");
-        let success_msg = document.getElementById('msg-success');
-        success_msg.style.display="block";
-        let contact = document.getElementById('msg-success').getBoundingClientRect().top+document.getElementById('msg-success').getBoundingClientRect().bottom;
-        console.log(contact);
-    }
-}
+    
+    inputs.forEach(input => {  
+        if(input.name === "nombre"){
+            data.completeName = input.value;
+        }
+        else if(input.name === "email"){
+            data.email = input.value;
+        }
+        else if(input.name === "message"){
+            data.message = input.value;
+        }
+    });
 
-function showWindowSuccess(){
-    document.getElementById('alert-msg').classList.add("show");
-    let check = document.querySelector('.check-icon');
-    check.style.display = 'none';
-    setTimeout(() => {
-        check.style.display = 'block';
-    }, 10);
-    document.getElementById('form').reset();
+    (function(){
+        emailjs.init("user_IEVJfpe97VCSXhQ83AP0M");
+    })();
+
+    const formResult = await emailjs.send("service_iyqsl2e", "template_mvpuxnr", data);
+    if(formResult.status === 200){
+        btnEnviar.innerText = "Enviar";
+        btnEnviar.setAttribute('disabled', false);
+        formStatus.innerText = "Mensaje enviado correctamente, nos pondremos en contacto con usted lo más pronto posible!";
+    }
 }
 
 function HiddeWindowSuccess(){
