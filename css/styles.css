@@ -32,11 +32,11 @@ html {
     transition: .3s ease all;
 }
 
-.wsp .wsp-icon:hover{
+.wsp:hover .wsp-icon{
     background-color: rgb(2, 196, 2);
 }
 
-.wsp .wsp-icon:hover ~ .texto-wsp{
+.wsp:hover .texto-wsp{
     transform: translateX(0);
     color: orange;
 }
@@ -281,6 +281,13 @@ nav .uk-logo:hover{
     text-decoration: none;
 }
 
+.project.loansApp{
+  background-image: url('../img/loansApp.png');
+  background-size: cover;
+  position: relative;
+  text-decoration: none;
+}
+
 .project::before{
     content: "";
     position: absolute;
@@ -298,6 +305,13 @@ nav .uk-logo:hover{
 
 .project:hover img{
     opacity: 0;
+}
+
+.project.calculator{
+  background-image: url('../img/calculator.png');
+  background-size: cover;
+  position: relative;
+  text-decoration: none;
 }
 
 .project:hover .text-project {
