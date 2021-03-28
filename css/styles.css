@@ -282,7 +282,7 @@ nav .uk-logo:hover{
 }
 
 .project.loansApp{
-  background-image: url('../img/loansApp.png');
+  background-image: url('../img/loansApp.PNG');
   background-size: cover;
   position: relative;
   text-decoration: none;
@@ -308,7 +308,7 @@ nav .uk-logo:hover{
 }
 
 .project.calculator{
-  background-image: url('../img/calculator.png');
+  background-image: url('../img/calculator.PNG');
   background-size: cover;
   position: relative;
   text-decoration: none;
